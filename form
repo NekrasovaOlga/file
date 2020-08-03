@@ -1,0 +1,62 @@
+[cr-field="radio-list"]{
+display: flex;
+justify-content: space-between;
+}
+
+.label {
+  display: inline-block;
+  margin: 0!important;
+  font-size: {{font_size}}px;
+}
+
+.screen-xs .label {
+  margin-bottom: 6px!important;
+  margin-right: 1px!important;
+}
+
+.label + .label {
+  margin-left: -1px;
+}
+
+.checkbox, .radio {
+  display: none;
+}
+
+input ~ span {
+  display: inline-block;
+  padding: {{input_size_visota}}px {{input_size_shirina}}px;
+  background: {{background}};
+  color: {{text_color}};
+  border: {{border/1.7}}px solid {{border_color}};
+}
+
+.label:first-of-type input ~ span {
+  border-radius: {{border_radius}}px 0 0 {{border_radius}}px;
+}
+
+.label:last-of-type input ~ span {
+  border-radius: 0 {{border_radius}}px {{border_radius}}px 0;
+}
+
+.screen-md input ~ span {
+  padding: {{input_size_visota}}px {{input_size_shirina/1.22}}px;
+}
+
+.screen-xs .label:last-of-type input ~ span {
+  border-radius: 5px 5px 5px 5px;
+}
+.screen-xs input ~ span {
+  border-radius: 5px 5px 5px 5px;
+  padding: {{input_size_visota / 1.25}}px {{input_size_shirina/1.5}}px;
+}
+
+.screen-xs input ~ span {
+  border-radius: 5px 5px 5px 5px;
+  padding: {{input_size_visota / 1.25}}px {{input_size_shirina/1.5}}px;
+}
+
+input:checked ~ span {
+  color: {{text_color_active}};
+  border-color: {{background_active}};
+  background-color: {{background_active}};
+}
