@@ -1,0 +1,160 @@
+.gallery1-root {
+  position: relative;
+}
+.gallery1-root.top {
+  margin-top: {{mini_height+paddings}}px;
+}
+.gallery1-root.bottom {
+  margin-bottom: {{gap}}px;
+}
+
+.screen-md .gallery1-root.bottom {
+ margin-bottom: {{paddings}}px;
+}
+
+.screen-xs .gallery1-root.bottom {
+ margin-bottom: {{paddings}}px;
+}
+
+.gallery1-root.left {
+  margin-left: {{mini_height+paddings}}px;
+}
+.gallery1-root.right {
+  margin-right: {{mini_height+paddings}}px;
+}
+.gallery1-previous, .gallery1-next {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0 0 2px black;
+  font-size: {{fontsize}}px;
+  opacity: 0.5;
+  transition: 200ms opacity;
+}
+.gallery1-previous:hover, .gallery1-next:hover {
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+.gallery1-previous {
+  left: 0;
+}
+.gallery1-next {
+  right: 0;
+}
+.gallery1-image > div {
+  height: {{height}}px;
+  background-position: center;
+  background-size: cover;
+  border-radius: {{radius}}px;
+}
+
+.screen-md .gallery1-image > div {
+  height: {{height_md}}px;
+}
+
+.screen-xs .gallery1-image > div {
+  height: {{height_xs}}px;
+}
+
+.gallery1-pagination {
+  display: grid;
+  grid-template-columns: repeat({{mini_columns_repeat}}, 1fr);
+  grid-auto-rows: {{mini_height}}px;
+  grid-gap: {{gap}}px;
+}
+
+.screen-md .gallery1-pagination {
+ height: {{mini_height_md}}px;
+ grid-auto-rows: {{mini_height_md}}px;
+}
+
+.screen-xs .gallery1-pagination {
+height: {{mini_height_xs}}px;
+grid-auto-rows: {{mini_height_xs}}px;
+grid-template-columns:repeat(6,1fr); /*В ряду в мобильной версии будет не 9 миниатюр а 6*/
+}
+
+.gallery1-pagination.top {
+  bottom: 0;
+  width: 100%;
+}
+.gallery1-pagination.bottom {
+ 	width: 100%;
+}
+
+.screen-md .gallery1-pagination.bottom {
+ bottom: -{{mini_height_md+paddings}}px;
+ width: 100%;
+}
+
+.screen-xs .gallery1-pagination.bottom {
+ bottom: -{{mini_height_xs+paddings}}px;
+ width: 100%;
+}
+
+.gallery1-pagination.left,
+.gallery1-pagination.right {
+  top: 0;
+  height: 100%;
+  width: {{mini_height}}px;
+  flex-direction: column;
+}
+.gallery1-pagination.left {
+  left: 0px;
+}
+.gallery1-pagination.right {
+  right: 0px;
+}
+.gallery1-page {
+  overflow: hidden;
+}
+.gallery1-pagination.left .gallery1-page + .gallery1-page,
+.gallery1-pagination.right .gallery1-page + .gallery1-page {
+  margin-left: 0;
+  margin-top: {{gap}}px;
+}
+.gallery1-pagination.opacity .gallery1-page {
+  opacity: 0.4;
+  transition: 300ms opacity;
+}
+.gallery1-pagination.opacity .gallery1-page:hover {
+  opacity: 0.7;
+}
+.gallery1-pagination.opacity .gallery1-page.is-active {
+  opacity: 1;
+}
+.gallery1-pagination.gray .gallery1-page {
+  filter: grayscale(1);
+  transition: 300ms filter;
+}
+.gallery1-pagination.gray .gallery1-page:hover {
+  filter: grayscale(0.5);
+}
+.gallery1-pagination.gray .gallery1-page.is-active {
+  filter: grayscale(0);
+}
+.gallery1-pagination.border .gallery1-page-image > div {
+  border: {{bordersize}}px solid transparent;
+  transition: 300ms border;
+}
+.gallery1-pagination.border .gallery1-page-image:hover > div {
+  border-color: {{color.a_set(0.5)}};
+}
+.gallery1-pagination.border .gallery1-page.is-active .gallery1-page-image > div {
+  border-color: {{color}};
+}
+.gallery1-page-image > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  border-radius: {{radius}}px;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+}
