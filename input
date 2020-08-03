@@ -1,0 +1,267 @@
+<div cr-field="name">
+  <div class="name {{_hidename ? 'hidden' : ''}}">
+    {{_name}} {{_required ? '*' : ''}}
+  </div>
+  <div class="input">
+    <input class="form-control" type="text">
+  </div>
+  <div cr-field-addon></div>
+</div>
+<div cr-field="phone">
+  <div class="name {{_hidename ? 'hidden' : ''}}">
+    {{_name}} {{_required ? '*' : ''}}
+  </div>
+  <div class="input">
+    <input class="form-control" type="text">
+  </div>
+  <div cr-field-addon></div>
+</div>
+<div cr-field="email">
+  <div class="name {{_hidename ? 'hidden' : ''}}">
+    {{_name}} {{_required ? '*' : ''}}
+  </div>
+  <div class="input">
+    <input class="form-control" type="email">
+  </div>
+  <div cr-field-addon></div>
+</div>
+<div cr-field="count">
+  <div class="name {{_hidename ? 'hidden' : ''}}">
+    {{_name}} {{_required ? '*' : ''}}
+  </div>
+  <div class="input">
+    <input class="form-control" type="number">
+  </div>
+</div>
+<div cr-field="text">
+  <div class="name {{_hidename ? 'hidden' : ''}}">
+    {{_name}} {{_required ? '*' : ''}}
+  </div>
+  <div class="input">
+    <input class="form-control" type="text" placeholder="https://www.youtube.com/watch?v=XXXXXXXX">
+  </div>
+  <div cr-field-addon></div>
+</div>
+<div cr-field="textarea">
+  <div class="name {{_hidename ? 'hidden' : ''}}">
+    {{_name}} {{_required ? '*' : ''}}
+  </div>
+  <div class="input">
+    <textarea class="form-control"></textarea>
+  </div>
+  <div cr-field-addon></div>
+</div>
+<div cr-field="checkbox-list">
+  <div class="name {{_hidename ? 'hidden' : ''}}">
+    {{_name}} {{_required ? '*' : ''}}
+  </div>
+  <label cr-field-item class="label">
+    <input type="checkbox">
+    <div class="checkbox">
+      <svg viewBox="0 0 18 18" version="1.1">
+        <g>
+          <rect fill="none" x="0" y="0" width="18" height="18"></rect>
+          <polygon fill="#FFFFFF" points="8 10 14 4 16 6 8 14 2 8 4 6"></polygon>
+        </g>
+      </svg>
+    </div>
+    <span cr-field-item_value></span>
+  </label>
+  <div cr-field-addon></div>
+</div>
+<div cr-field="checkbox-visual">
+  <div class="name {{_hidename ? 'hidden' : ''}}">
+    {{_name}} {{_required ? '*' : ''}}
+  </div>
+  <div class="items">
+    <div cr-field-item class="item">
+      <label class="label">
+        <input type="checkbox">
+        <div cr-field-item_bgimage class="bgimage">
+          <div class="tick">
+            <svg viewBox="0 0 18 18" version="1.1">
+              <g>
+                <rect fill="none" x="0" y="0" width="18" height="18"></rect>
+                <polygon fill="#FFFFFF" points="8 10 14 4 16 6 8 14 2 8 4 6"></polygon>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div cr-field-item_value class="subname"></div>
+      </label>
+    </div>
+  </div>
+  <div cr-field-addon></div>
+</div>
+<div cr-field="checkbox-input">
+  <label>
+    <input type="checkbox">
+    <div class="checkbox">
+      <svg viewBox="0 0 18 18" version="1.1">
+        <g>
+          <rect fill="none" x="0" y="0" width="18" height="18"></rect>
+          <polygon fill="#FFFFFF" points="8 10 14 4 16 6 8 14 2 8 4 6"></polygon>
+        </g>
+      </svg>
+    </div>
+    <span>{{_name}} {{_required ? '*' : ''}}</span>
+  </label>
+  <div cr-field-addon></div>
+</div>
+<div cr-field="radio-list">
+  <div class="name {{_hidename ? 'hidden' : ''}}">
+    {{_name}} {{_required ? '*' : ''}}
+  </div>
+  <label cr-field-item class="label">
+    <input type="checkbox">
+    <div class="radio"></div>
+    <span cr-field-item_value></span>
+  </label>
+  <div cr-field-addon></div>
+</div>
+<div cr-field="radio-visual">
+  <div class="name {{_hidename ? 'hidden' : ''}}">
+    {{_name}} {{_required ? '*' : ''}}
+  </div>
+  <div class="items">
+    <div cr-field-item class="item">
+      <label class="label">
+        <input type="checkbox">
+        <div cr-field-item_bgimage class="bgimage">
+          <div class="tick">
+            <svg viewBox="0 0 18 18" version="1.1">
+              <g>
+                <rect fill="none" x="0" y="0" width="18" height="18"></rect>
+                <polygon fill="#FFFFFF" points="8 10 14 4 16 6 8 14 2 8 4 6"></polygon>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div cr-field-item_value class="subname"></div>
+      </label>
+    </div>
+  </div>
+  <div cr-field-addon></div>
+</div>
+<div cr-field="select-menu">
+  <div class="name {{_hidename ? 'hidden' : ''}}">
+    {{_name}} {{_required ? '*' : ''}}
+  </div>
+  <div class="form-control">
+    <select></select>
+    <div class="flexgrid">
+      <div class="left" cr-field_value></div>
+      <div class="right">
+        <i class="fa fa-angle-down"></i>
+      </div>
+    </div>
+  </div>
+  <div cr-field-addon></div>
+</div>
+<div cr-field="file">
+  <div class="name {{_hidename ? 'hidden' : ''}}">
+    {{_name}} {{_required ? '*' : ''}}
+  </div>
+  <div class="form-control">
+    <div class="flexgrid">
+      <div class="left">
+        <svg style="enable-background:new 0 0 30 30;" version="1.1"
+          viewBox="5 0 30 30" xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink">
+          <path d="M18.399,9.963l-5.862,6.186c-1.049,1.107-1.049,
+                   2.902,0,4.009l0,0c1.049,1.107,2.75,1.107,3.8,
+                   0l7.287-7.689 c1.836-1.937,1.836-5.079,0-7.016l0,
+                   0c-1.836-1.937-4.813-1.937-6.649,0l-8.006,
+                   8.448c-2.623,2.768-2.623,7.255,0,10.023l0,0
+                   c2.623,2.768,6.876,2.768,9.499,0l5.632-5.943"
+                style="fill: none; stroke: currentColor;
+                       stroke-width: 2; stroke-linecap: round;"/></svg>
+      </div>
+      <div class="center" cr-field_state></div>
+      <div class="right">
+        <span cr-field_clean class="clean">
+          <svg enable-background="new 0 0 256 256" version="1.1"
+               viewBox="0 0 256 256" xml:space="preserve"
+               xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M137.051,128l75.475-75.475c2.5-2.5,2.5-6.551,
+                     0-9.051s-6.551-2.5-9.051,0L128,118.949L52.525,43.475
+                     c-2.5-2.5-6.551-2.5-9.051,0s-2.5,6.551,0,
+                     9.051L118.949,128l-75.475,75.475c-2.5,2.5-2.5,6.551,
+                     0,9.051  c1.25,1.25,2.888,1.875,4.525,
+                     1.875s3.275-0.625,4.525-1.875L128,137.051l75.475,
+                     75.475c1.25,1.25,2.888,1.875,4.525,1.875
+                     s3.275-0.625,4.525-1.875c2.5-2.5,2.5-6.551,
+                     0-9.051L137.051,128z"
+                  style="stroke: currentColor;"/>
+          </svg>
+        </span>
+      </div>
+    </div>
+    <input type="file">
+  </div>
+  <div cr-field-addon></div>
+</div>
+<div cr-field="slider">
+  <div class="name {{_hidename ? 'hidden' : ''}}">
+    {{_name}} {{_required ? '*' : ''}}
+  </div>
+  <div cr-field-input 
+       line-height="{{sliders_width}}"
+       point-size="{{sliders_size}}"
+       point-style="{{sliders_type}}"
+       color="{{color}}">
+  </div>
+  <div cr-field-addon></div>
+</div>
+<div cr-field="result">
+  <div class="flexgrid align-{{_align}}">
+    <div class="left">
+      <div class="name {{_hidename ? 'hidden' : ''}}">{{_name}}</div>
+    </div>
+    <div cr-field-result class="right"></div>
+  </div>
+  <div cr-field-addon></div>
+</div>
+<div cr-field="html">
+  <div class="name {{_hidename ? 'hidden' : ''}}">{{_name}}</div>
+  <div cr-field-template></div>
+  <div cr-field-addon></div>
+</div>
+<div cr-field="privacy-button">
+  <div cr-field-button class="open"></div>
+  <div cr-field-addon></div>
+</div>
+<div cr-field="privacy-text">
+  <div cr-field-text></div>
+  <div cr-field-addon></div>
+</div>
+<div cr-field="privacy-checkbox">
+  <label>
+    <input type="checkbox">
+    <div class="checkbox">
+      <svg viewBox="0 0 18 18" version="1.1">
+        <g>
+          <rect fill="none" x="0" y="0" width="18" height="18"></rect>
+          <polygon fill="#FFFFFF" points="8 10 14 4 16 6 8 14 2 8 4 6"></polygon>
+        </g>
+      </svg>
+    </div>
+    <span cr-field-text></span>
+  </label>
+  <div cr-field-addon></div>
+</div>
+<div cr-field="hidden">
+  <div class="name">{{_name}}</div>
+  <div class="input">
+    <input class="form-control only-for-editor" type="text">
+    <input class="form-control only-for-production" type="hidden">
+  </div>
+  <div cr-field-addon></div>
+</div><div cr-field="hackable">
+  <div class="name {{_hidename ? 'hidden' : ''}}">
+    {{_name}} {{_required ? '*' : ''}}
+  </div>
+  <div cr-field-addon></div>
+</div>
