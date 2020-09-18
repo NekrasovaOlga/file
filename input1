@@ -1,0 +1,54 @@
+<script type="text/javascript">
+cr.api(page => {
+    //ok
+    const cartClass = 'configurator'
+    const formClass = 'configForm';
+    const comCarts  = page.getComponentsByClass(cartClass)
+
+    comCarts.forEach(comCart => {
+        const comForm   = comCart.getComponentsByClass(formClass)[0]
+        const comFields = comForm.fields
+
+        let dataItemJson = $(comCart.el).attr('data-item')
+        let dataItem     = JSON.parse(dataItemJson)
+
+        setDataItem()
+        
+        $(comForm.el).on('change', setDataItem) 
+
+        function setDataItem() {
+            dataItem  = dataItem.map(item => {
+                item.type === 'price' ?
+                    item.value = getCalcValue() :
+                    item.type === 'title' ?
+                        item.value = getTitleValue() :
+                        false
+                return item
+            })
+            dataItemJson = JSON.stringify(dataItem)
+            $(comCart.el).attr('data-item', dataItemJson)
+        }
+        function getCalcValue() {
+            return $(comForm.el).find('[cr-field-result]').eq(0).text().trim()
+        }
+        function getTitleValue() {
+            const itemname = $(comCart.el).find('[data-role=itemname]').text().trim()
+
+            let params = '';
+            comFields.forEach(field => {
+                params += isCalc(field) ? 
+                    '' : 
+                    field.value ? 
+                        `` :
+                        ''
+            })
+            params = `<div class="config" style="text-align: left">${params}</div>`
+
+            return itemname ? `${itemname}<br>${params}` : params
+        }
+        function isCalc(comField) {
+            return $(comField.el).find('[cr-field-result]').length
+        }
+    })
+})
+</script>
